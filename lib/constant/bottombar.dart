@@ -29,8 +29,8 @@ class Gbottombar extends StatelessWidget {
         ),
         GButton(
           iconColor: Colors.deepPurpleAccent,
-          icon: Icons.person,
-          text: 'Profile',
+          icon: Icons.message_rounded,
+          text: 'Messages',
         ),
       ],
     );

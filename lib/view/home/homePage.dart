@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:fdapp/constant/appdrawer.dart';
 import 'package:fdapp/constant/bottombar.dart';
+import 'package:fdapp/helpers/bigText.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -23,10 +24,7 @@ class _homePageState extends State<homePage> {
       bottomNavigationBar: Gbottombar(),
       appBar: AppBar(
         backgroundColor: Colors.deepPurpleAccent,
-        title: const Text(
-          'FoodBuzz',
-          style: TextStyle(fontSize: 22),
-        ),
+        title: bigText(text: 'FoodBuzz'),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
