@@ -1,6 +1,6 @@
+import 'package:fdapp/view/food/singleFood.dart';
 import 'package:fdapp/view/home/homePage.dart';
 import 'package:flutter/material.dart';
-
 import 'view/splash/splashpage.dart';
 
 void main(List<String> args) {
@@ -22,6 +22,7 @@ class _myAppState extends State<myApp> {
       home: const splashPage(),
       routes: {
         homePage.routenames: (context) => const homePage(),
+        singleFoodPage.routenames: (context) => const singleFoodPage(),
       },
     );
   }

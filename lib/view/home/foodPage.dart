@@ -1,3 +1,4 @@
+import 'package:fdapp/view/food/singleFood.dart';
 import 'package:flutter/material.dart';
 
 class foodPage extends StatefulWidget {
@@ -159,26 +160,28 @@ class popularFood extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.deepPurpleAccent),
-                      onPressed: () {},
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Icon(
-                            Icons.arrow_right_alt_sharp,
-                            color: Colors.white,
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            'View Details',
-                            style:
-                                TextStyle(fontSize: 12.0, color: Colors.white),
-                          )
-                        ],
-                      )),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.deepPurpleAccent),
+                    onPressed: () {
+                      Navigator.pushNamed(context, singleFoodPage.routenames);
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Icons.arrow_right_alt_sharp,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          'View Details',
+                          style: TextStyle(fontSize: 12.0, color: Colors.white),
+                        )
+                      ],
+                    ),
+                  ),
                 )
               ],
             ),
@@ -261,7 +264,9 @@ class popularFood2 extends StatelessWidget {
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.deepPurpleAccent),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, singleFoodPage.routenames);
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
@@ -296,63 +301,69 @@ class bottomStyle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text(
-          'Famous japanese Udon',
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 10),
-        Row(
-          children: [
-            Wrap(
-              children: List.generate(
-                5,
-                (index) => const Icon(
-                  Icons.star,
-                  color: Colors.deepOrangeAccent,
-                  size: 15,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Famous japanese Udon',
+            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Wrap(
+                children: List.generate(
+                  5,
+                  (index) => const Icon(
+                    Icons.star,
+                    color: Colors.deepOrangeAccent,
+                    size: 15,
+                  ),
                 ),
               ),
+              const SizedBox(
+                width: 10,
+              ),
+              const Text('4.5'),
+              const SizedBox(
+                width: 10,
+              ),
+              const Text('1287 Comments')
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Icon(
+                  Icons.pedal_bike,
+                  color: Colors.deepPurpleAccent,
+                ),
+                SizedBox(width: 5),
+                Text('Takeaway'),
+                SizedBox(width: 5),
+                Icon(
+                  Icons.location_on,
+                  color: Colors.deepPurpleAccent,
+                ),
+                Text('1.2KM'),
+                SizedBox(width: 5),
+                Icon(
+                  Icons.alarm,
+                  color: Colors.deepPurpleAccent,
+                ),
+                SizedBox(width: 5),
+                Text('32 Min'),
+              ],
             ),
-            const SizedBox(
-              width: 10,
-            ),
-            const Text('4.5'),
-            const SizedBox(
-              width: 10,
-            ),
-            const Text('1287 Comments')
-          ],
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        Row(
-          children: const [
-            Icon(
-              Icons.pedal_bike,
-              color: Colors.deepPurpleAccent,
-            ),
-            SizedBox(width: 5),
-            Text('Takeaway'),
-            SizedBox(width: 5),
-            Icon(
-              Icons.location_on,
-              color: Colors.deepPurpleAccent,
-            ),
-            Text('1.2KM'),
-            SizedBox(width: 5),
-            Icon(
-              Icons.alarm,
-              color: Colors.deepPurpleAccent,
-            ),
-            SizedBox(width: 5),
-            Text('32 Min'),
-          ],
-        ),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }
