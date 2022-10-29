@@ -1,5 +1,8 @@
+import 'package:fdapp/view/Auth/registrationPage.dart';
+import 'package:fdapp/view/Auth/signinPage.dart';
 import 'package:fdapp/view/food/singleFood.dart';
 import 'package:fdapp/view/home/homePage.dart';
+import 'package:fdapp/view/transaction/transactionPage.dart';
 import 'package:flutter/material.dart';
 import 'view/splash/splashpage.dart';
 
@@ -23,6 +26,9 @@ class _myAppState extends State<myApp> {
       routes: {
         homePage.routenames: (context) => const homePage(),
         singleFoodPage.routenames: (context) => const singleFoodPage(),
+        signinPage.routenames: (context) => const signinPage(),
+        registrationPage.routenames: (context) => const registrationPage(),
+        transactionPage.routenames: (context) => const transactionPage(),
       },
     );
   }

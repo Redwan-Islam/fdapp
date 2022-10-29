@@ -1,3 +1,4 @@
+import 'package:fdapp/constant/mediaIcon.dart';
 import 'package:fdapp/helpers/bigText.dart';
 import 'package:flutter/material.dart';
 
@@ -94,35 +95,10 @@ class userProfile extends StatelessWidget {
                   thickness: 2.0,
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(
-                          'assets/icons/facebook.png',
-                          height: 40.0,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(
-                          'assets/icons/instagram.png',
-                          height: 40.0,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(
-                          'assets/icons/linkedin.png',
-                          height: 40.0,
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: mediaIcon(),
                 ),
               ),
               const SizedBox(

@@ -1,6 +1,7 @@
 import 'package:fdapp/constant/appdrawer.dart';
 import 'package:fdapp/constant/bottombar.dart';
 import 'package:fdapp/constant/iconWidget.dart';
+import 'package:fdapp/view/Auth/signinPage.dart';
 import 'package:flutter/material.dart';
 import 'package:quantity_input/quantity_input.dart';
 
@@ -89,7 +90,9 @@ class _singleFoodPageState extends State<singleFoodPage> {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.deepPurpleAccent),
-                      onPressed: (() {}),
+                      onPressed: (() {
+                        Navigator.pushNamed(context, signinPage.routenames);
+                      }),
                       child: SizedBox(
                         width: 100,
                         height: 40,
